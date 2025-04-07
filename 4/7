@@ -1,0 +1,9 @@
+시퀀스
+list, tuple, range, str
+element
+동일한 시퀀스 객체는 연결 가능(list, tuple)
+입력, 추가, 삭제, 변경
+len(수의 전체 길이)
+인덱스(index)
+a = [1, 2, 3, 4, 5], 결과 = print(a[2])
+print(a(len)a-1)
