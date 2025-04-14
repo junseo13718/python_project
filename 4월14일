@@ -1,0 +1,8 @@
+모든 숫자는 0부터 시작
+시퀀스 자료형 : 데이터를 연속적으로 저장할 수 있는 자료형
+(list, tuple, str, range)
++ 는 연결의 기호이다.
+추가 - append(x), extand(seq), insert(index, x)
+삭제 - clear(), pop(x), remove(x)
+변경 - reverse(), sort()
+기타 - count(x), index(X)
