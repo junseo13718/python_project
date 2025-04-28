@@ -1,0 +1,12 @@
+sum() : 더하기
+max() : 가장 큰값
+min() : 가장 작은 값
+abs() : 숫자 부호를 무조건 +로 바꿔줌
+round() : 반올림
+len() : 시퀀스 자료형의 길이 계산
+딕셔너리 (dict {}, ()  둘 다 가능하긴 하다): 사전
+key: value
+세미콜론 ;, 콜론 :
+dict(메로나: 1000, 폴라포: 1200)
+map(int, input().split())
+map을 감싸고 list 붙이기(ex. a = list(map(int, input().split())))
