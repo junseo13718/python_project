@@ -1,0 +1,7 @@
+dict(zip(name, ~~))
+key:value
+합집합 = |
+교집합 = &
+차집합 = -
+결과 = {~~~}
+컨테이너 자료형 = list, tuple, dict, set
