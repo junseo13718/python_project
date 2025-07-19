@@ -1,0 +1,6 @@
+c = 0
+c +=1 # c = c+1
+a = int(input())
+for _ in range(a):
+    b = input()
+    result = isPalindrome(b)
