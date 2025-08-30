@@ -1,0 +1,3 @@
+for: 반복 횟수(for 변수 in 시퀀스 자료형 or 컨테이너 자료형: 반복할 코드)
+while: 반복 조건(dict, list, tuple, range, set, str)
+while문(반복할 코드, 변화식(증감식))
