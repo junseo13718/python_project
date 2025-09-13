@@ -1,0 +1,9 @@
+a.casefold: a를 소문자로 만든다
+a.split(x): x 기준으로 a를 자른다
+a.center(x): a를 x칸에서 가운데 정렬한 문자열 return
+a.ljust(x): a를 x칸에서 왼쪽으로 정렬한다
+a.rjunst(x): a를 x칸에서 오른쪽으로 정렬한다
+a.replace(x, y): a의 x를 y로 바꾼다
+a.isdigit(): a가 문자면 False, a가 숫자면 True
+a.islower(): a가 소문자로 이루어졌으면 True, 대문자로 이루어졌으면 False
+a.isupper(): a가 대문자로 이루어졌으면 True, 소문자로 이루어졌으면 True
