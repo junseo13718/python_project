@@ -1,0 +1,14 @@
+def cal(a, x, y):
+    if a == '+':
+        return x + y
+    if a == '-':
+        return x + y
+    if a == '*':
+        return x + y
+    if a == '/':
+        return x + y
+
+a, x, y = map(str, input().split())
+x = int(x)
+y = int(y)
+print(cal(a, x, y))
