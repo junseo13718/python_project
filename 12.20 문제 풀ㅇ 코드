@@ -1,0 +1,7 @@
+def longest_polydivisible_prefix(n):
+    a = str(n)
+    prefix = 0
+
+    for i in range(n):
+        if n[0, b] == n[0, b]/b:
+            print(longest_polydivisible_prefix(n))
