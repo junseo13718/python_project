@@ -1,0 +1,41 @@
+# y가 세로축
+# x가 가로축
+
+a = [["@", "ㅁ", " "],
+     [" ", " ", " "],
+     ["P", " ", "E"]]
+p = 0
+y, x = 0, 0
+maz_move = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+
+
+for i in a:
+    p += i.count("P")
+print(f"p {p}")
+while True:
+    for i in a:
+        print(i)
+    move = int(input("움직일 위치는? 0:오른 1:아래 2:왼 3:위"))
+    dy, dx = maz_move[move]
+    if x+dx >= 3 or x+dx <= -1 or y+dy >= 3 or y+dy <= -1:
+        print("올바르지 않은 이동입니다.\n")
+        continue
+    else:
+        if a[y+dy][x+dx] == "ㅁ":
+            print("올바르지 않은 이동입니다.\n")
+            continue
+        if a[y+dy][x+dx] == "P":
+            print("포인트 획득")
+            p -= 1
+        if a[y+dy][x+dx] == "E":
+            if p == 0:
+                print("탈출 성공")
+                break
+            else:
+                print("다시시도")
+                continue
+
+        a[y][x] = " "
+        x += dx
+        y += dy
+        a[y][x] = "@"
