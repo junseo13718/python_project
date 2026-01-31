@@ -1,0 +1,132 @@
+import random
+
+
+
+
+class TicTacToe:
+    a = 10
+    tic_map = []
+    def __init__(self, regame=-1, map_size=3):
+        self.map_size = map_size
+        self.regame = regame
+
+#     def make_map(self):
+#         tic_map = []
+#
+#         for map_row in range(1, self.map_size+1):
+#             m_row = []
+#             for map_cal in range(-self.map_size+1, 1):
+#                 m_row.append(self.map_size * map_row + map_cal)
+#
+#             tic_map.append(m_row)
+#
+#         return tic_map
+#
+# t = TicTacToe(map_size=4)
+# print(t.make_map())
+
+
+    def make_map(self):
+        tic_map = []
+
+        for map_row in range(self.map_size, 0, -1):
+            m_row = []
+            for map_cal in range(0, -self.map_size, -1):
+                m_row.append(self.map_size * map_row + map_cal)
+
+            tic_map.append(m_row)
+
+        return tic_map
+
+t = TicTacToe(map_size=3)
+print(t.make_map())
+
+
+
+
+
+    # def check_win(m):
+    #     for r in range(3):
+    #         if m[r][0] == m[r][1] == m[r][2]:
+    #             return m[r][0]
+    #         elif m[0][r] == m[1][r] == m[2][r]:
+    #             return m[0][r]
+    #     if m[0][0] == m[1][1] == m[2][2] or m[0][2] == m[1][1] == m[2][0]:
+    #         return m[1][1]
+    #
+    #     return None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def check_win(m):
+#     for r in range(3):
+#         if m[r][0] == m[r][1] == m[r][2]:
+#             return m[r][0]
+#         elif m[0][r] == m[1][r] == m[2][r]:
+#             return m[0][r]
+#     if m[0][0] == m[1][1] == m[2][2] or m[0][2] == m[1][1] == m[2][0]:
+#         return m[1][1]
+#
+#     return None
+#
+#
+#
+# def print_map():
+#     for i in tic_map:
+#         print(*i)
+#     print('')
+#
+# tic_map =[[_*3-2, _*3-1, _*3] for _ in range(1, 4)
+# for i in tic_map:
+#     print(*i)
+# x = y = None
+#
+# turn = 'O'
+# count = 0
+# while True:
+#     if turn == 'O':
+#         num = int(input("넣고 싶은 자리를 입력해주세요. (1, 9):"))
+#         if 0 > num or num >= 10:
+#             print("다시 숫자를 선택하세요")
+#             continue
+#         x = num // 3 - 1 if num % 3 == 0 else num // 3
+#         y = num % 3 - 1
+#         if str(tic_map[x][y]).isdigit():
+#             tic_map[x][y] = 'O'
+#             turn = 'X'
+#             count += 1
+#         else:
+#             print("다시 숫자를 선택하세요.")
+#     else:
+#         num = random.randint(1, 10)
+#         x = num // 3 - 1 if num % 3 == 0 else num // 3
+#         y = num % 3 - 1
+#         if str(tic_map[x][y]).isdigit():
+#             tic_map[x][y] = 'X'
+#             turn = 'O'
+#             count += 1
+#         else:
+#             continue
+#         for i in tic_map:
+#             print(*i)
+#         print('')
+#
+#         if check_win(tic_map):
+#             print(f"{check_win(tic_map)}의 승리!")
+#             break
+#         elif count == 9:
+#             print("무승부!")
+#             break
