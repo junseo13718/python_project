@@ -1,0 +1,23 @@
+def S(r):
+    return r * (r + 1) // 2
+
+line = 0
+count = 1
+n = int(input())
+
+while(True):
+    line += count
+    if line >= n:
+        break
+    count += 1
+
+y = n - S(count - 1)
+x = count + 1 - y
+if count % 2 == 1:
+    print(x, end='')
+    print('/', end='')
+    print(y)
+else:
+    print(y, end='')
+    print('/', end='')
+    print(x)
