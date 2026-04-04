@@ -1,0 +1,89 @@
+import random
+
+
+accounts = {}
+for i in range(5):
+    acc = random.randint(10000000, 99999999)
+    pw = int(input(f"{i+1}번째 계좌({acc}) 비밀번호 설정(4자리 수): "))
+    money = random.randint(1000, 10000)
+    accounts[acc] = [pw, money]
+
+
+
+a = list(accounts.keys())[0]
+
+while True:
+    print("\n======= internet banking =======")
+    print("현재 계좌:", a)
+    print("1. 잔액 조회")
+    print("2. 이체")
+    print("3. 출금")
+    print("4. 계좌 목록 보기")
+    print("5. 종료")
+
+    menu = input("메뉴 선택: ")
+
+
+
+    if menu == '1':
+        print("잔액:", accounts[a][1])
+
+
+    elif menu == '2':
+        target = int(input("이체할 계좌번호: "))
+
+        if target not in accounts:
+            print("없는 계좌입니다.")
+            continue
+
+        n = int(input("금액: "))
+
+        if n <= 0:
+            print("잘못된 금액입니다.")
+        elif accounts[a][1] < n:
+            print("잔액이 부족합니다.")
+        else:
+            accounts[a][1] -= n
+            accounts[target][1] += n
+            print("이체 완료!")
+
+
+
+    elif menu == '3':
+        pw = int(input("비밀번호를 입력하십시오: "))
+
+        if pw != accounts[a][0]:
+            print("비밀번호가 옳바르지 않습니다.")
+            continue
+
+        n = int(input("출금 금액: "))
+
+        if n <= 0:
+            print("잘못된 금액입니다.")
+        elif accounts[a][1] < n:
+            print("잔액이 부족합니다.")
+        else:
+            accounts[a][1] -= n
+            print("출금 완료")
+
+
+
+    elif menu == '4':
+        print("계좌 목록:")
+        for acc in accounts:
+            print(acc)
+
+        b = int(input("사용할 계좌를 선택하십시오: "))
+        if b in accounts:
+            a = b
+        else:
+            print("존재하지 않는 계좌입니다.")
+
+
+
+    elif menu == '5':
+        print("사용해주셔서 감사합니다.")
+        break
+
+    else:
+        print("잘못된 입력입니다.")
